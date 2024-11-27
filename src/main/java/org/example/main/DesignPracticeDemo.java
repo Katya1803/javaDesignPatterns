@@ -1,8 +1,8 @@
 package org.example.main;
 
-
-
 import org.example.core.Executable;
+import org.example.principles.solid.srp.SRPExample;
+import org.example.principles.solid.ocp.OCPExample;
 
 import java.util.List;
 
@@ -14,9 +14,10 @@ public class DesignPracticeDemo {
     public static void main(String[] args) {
         System.out.println("Design Patterns and Principles Demo");
 
-        // Create a list of patterns and principles (currently empty)
+        // Add principles to the list
         List<Executable> executables = List.of(
-                // To be populated later with patterns and principles
+                new SRPExample(),
+                new OCPExample()
         );
 
         // Initialize the manager and execute

@@ -1,0 +1,26 @@
+1. Lý thuyết chi tiết về Open/Closed Principle (OCP)
+1.1. Định nghĩa
+Open/Closed Principle (Nguyên lý đóng mở):
+
+"Một class nên mở để mở rộng nhưng đóng để sửa đổi."
+Điều này nghĩa là bạn có thể mở rộng chức năng của một class mà không cần sửa đổi mã nguồn hiện tại của class đó.
+1.2. Mục đích
+Bảo vệ mã nguồn cũ: Đảm bảo mã hiện tại không bị thay đổi khi thêm tính năng mới → giảm thiểu nguy cơ tạo ra bug trong mã đã được kiểm tra.
+Hỗ trợ mở rộng: Dễ dàng thêm các chức năng mới bằng cách kế thừa hoặc implement interface mà không cần đụng đến mã gốc.
+1.3. Vấn đề nếu vi phạm
+Nếu một class cần phải sửa đổi để hỗ trợ thêm tính năng mới, ta có các vấn đề sau:
+
+Rủi ro bug: Việc thay đổi mã nguồn đã ổn định có thể làm xuất hiện lỗi không mong muốn.
+Khó bảo trì: Mỗi lần thêm chức năng mới, ta phải sửa lại logic trong mã cũ → tăng độ phức tạp.
+1.4. Cách tuân thủ OCP
+Sử dụng abstraction:
+Định nghĩa các interface hoặc abstract class cho hành vi chung.
+Khi thêm chức năng mới, tạo các class implement hoặc kế thừa abstraction này.
+Ví dụ thực tế:
+Một hệ thống thanh toán cần xử lý nhiều phương thức thanh toán (Credit Card, PayPal, Bitcoin):
+Thay vì sửa đổi class PaymentProcessor mỗi khi thêm phương thức thanh toán mới, ta tạo các class con kế thừa interface PaymentMethod.
+2. Triển khai ví dụ minh họa Open/Closed Principle
+Tình huống thực tế
+Một hệ thống thanh toán cần xử lý nhiều phương thức thanh toán: CreditCardPayment và PayPalPayment.
+Vi phạm OCP: Class PaymentProcessor có mã xử lý trực tiếp từng loại thanh toán → phải sửa đổi class mỗi khi thêm phương thức thanh toán mới.
+Tuân thủ OCP: Sử dụng interface PaymentMethod, mỗi phương thức thanh toán là một class riêng, PaymentProcessor chỉ làm việc với abstraction.
