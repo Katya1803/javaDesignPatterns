@@ -1,0 +1,26 @@
+Mẫu thiết kế Singleton là một trong những Creational Patterns phổ biến, được sử dụng rộng rãi trong lập trình Java và các framework như Spring. Mục tiêu của Singleton là đảm bảo rằng một class chỉ có một instance duy nhất tồn tại trong suốt vòng đời của ứng dụng, đồng thời cung cấp một điểm truy cập toàn cục đến instance đó.
+
+Đặc điểm của Singleton
+Đảm bảo một instance duy nhất:
+Một class chỉ có thể có một instance.
+Instance này được chia sẻ và truy cập bởi tất cả các phần khác của ứng dụng.
+Kiểm soát việc truy cập:
+Đối tượng Singleton thường được truy cập thông qua một phương thức tĩnh (static).
+Được sử dụng trong các trường hợp cần dùng tài nguyên duy nhất hoặc điểm truy cập chung:
+Bộ nhớ đệm (cache).
+Kết nối cơ sở dữ liệu.
+Quản lý cấu hình (configuration).
+Ưu điểm
+Tiết kiệm bộ nhớ: Chỉ tạo duy nhất một instance.
+Quản lý trạng thái dễ dàng: Một nguồn quản lý trung tâm.
+Tránh việc khởi tạo lặp lại không cần thiết.
+Nhược điểm
+Hạn chế mở rộng: Singleton vi phạm nguyên tắc OCP (Open/Closed Principle).
+Khó kiểm thử: Singleton làm cho các unit test trở nên khó khăn hơn vì nó được chia sẻ toàn cục.
+Phụ thuộc vào trạng thái toàn cục: Có thể dẫn đến lỗi nếu không được quản lý cẩn thận.
+Các cách triển khai Singleton
+Eager Initialization (Khởi tạo ngay từ đầu): Instance được tạo khi class được tải.
+Lazy Initialization (Khởi tạo khi cần): Instance chỉ được tạo khi nó thực sự cần.
+Thread-Safe Singleton (Đảm bảo an toàn khi chạy đa luồng): Sử dụng từ khóa synchronized để đảm bảo tính đồng bộ.
+Ứng dụng trong Spring Framework
+Trong Spring, Bean mặc định là Singleton, nghĩa là chỉ có duy nhất một instance của Bean trong toàn bộ Application Context.
