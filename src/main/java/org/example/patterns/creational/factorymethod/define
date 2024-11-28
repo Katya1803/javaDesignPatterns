@@ -1,0 +1,7 @@
+Factory Pattern là một trong những Creational Patterns phổ biến nhất. Nó cung cấp một phương thức hoặc lớp để tạo ra các đối tượng mà không cần chỉ định trực tiếp lớp cụ thể của đối tượng đó.
+
+Lý thuyết về Factory Pattern
+Mục tiêu:
+Tách biệt logic tạo đối tượng ra khỏi mã sử dụng đối tượng.
+Giúp giảm sự phụ thuộc (coupling) vào lớp cụ thể.
+Ứng dụng: Khi cần tạo nhiều loại đối tượng có đặc điểm khác nhau nhưng cùng kế thừa từ một interface hoặc lớp cơ sở.

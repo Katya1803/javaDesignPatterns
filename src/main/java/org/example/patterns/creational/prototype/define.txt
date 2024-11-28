@@ -1,0 +1,11 @@
+Prototype Pattern thuộc nhóm Creational Patterns, cho phép bạn tạo đối tượng mới bằng cách sao chép (clone) từ một đối tượng mẫu (prototype). Điều này đặc biệt hữu ích khi việc khởi tạo một đối tượng mới từ đầu quá tốn kém hoặc phức tạp.
+
+Lý thuyết về Prototype Pattern
+Mục tiêu:
+Tạo các đối tượng mới bằng cách sao chép từ một đối tượng mẫu có sẵn.
+Tránh phải khởi tạo đối tượng bằng cách sử dụng từ khóa new mỗi lần.
+Ứng dụng:
+Khi việc khởi tạo đối tượng từ đầu là tốn kém hoặc phức tạp.
+Khi cần tạo ra nhiều đối tượng có cấu trúc tương tự nhưng khác nhau về giá trị nội tại.
+Tình huống thực tế: Hệ thống quản lý sản phẩm
+Mô tả: Một hệ thống quản lý sản phẩm cần tạo ra nhiều sản phẩm (Product) có thông tin tương tự, chẳng hạn như "Sản phẩm mẫu" với các thuộc tính mặc định. Thay vì khởi tạo mỗi sản phẩm từ đầu, hệ thống sử dụng Prototype Pattern để sao chép từ một sản phẩm mẫu.
