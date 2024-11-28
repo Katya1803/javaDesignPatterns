@@ -1,0 +1,12 @@
+Nguyên tắc DRY là một trong những nguyên tắc cốt lõi trong phát triển phần mềm, khuyến khích việc giảm thiểu sự lặp lại không cần thiết trong mã nguồn.
+
+Định nghĩa
+DRY tập trung vào việc tránh lặp lại logic hoặc mã nguồn bằng cách trừu tượng hóa các phần dùng chung thành các hàm, lớp, hoặc module tái sử dụng.
+Khi nguyên tắc DRY được tuân thủ, việc thay đổi logic ở một nơi sẽ không yêu cầu thay đổi tương tự ở nhiều nơi khác, từ đó giảm lỗi và chi phí bảo trì.
+Ví dụ về vi phạm DRY
+Sao chép logic giống nhau vào nhiều nơi khác nhau.
+Viết mã tương tự trong các hàm hoặc lớp khác nhau thay vì tái sử dụng.
+Cách áp dụng DRY
+Hàm chung (Reusable Functions): Trích xuất logic lặp lại vào các hàm hoặc phương thức dùng chung.
+Kế thừa và giao diện: Sử dụng kế thừa hoặc giao diện để tránh lặp lại mã giữa các lớp.
+Sử dụng thư viện: Áp dụng các thư viện hoặc framework nếu đã có giải pháp cho vấn đề của bạn.

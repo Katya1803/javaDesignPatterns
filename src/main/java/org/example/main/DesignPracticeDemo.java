@@ -1,6 +1,7 @@
 package org.example.main;
 
 import org.example.core.Executable;
+import org.example.principles.dry.DRYExample;
 import org.example.principles.solid.dip.DIPExample;
 import org.example.principles.solid.isp.ISPExample;
 import org.example.principles.solid.srp.SRPExample;
@@ -23,7 +24,8 @@ public class DesignPracticeDemo {
                 new OCPExample(),
                 new LSPExample(),
                 new ISPExample(),
-                new DIPExample()
+                new DIPExample(),
+                new DRYExample()
         );
 
         // Initialize the manager and execute
