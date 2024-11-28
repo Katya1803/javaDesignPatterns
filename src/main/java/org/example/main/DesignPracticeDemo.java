@@ -3,6 +3,7 @@ package org.example.main;
 import org.example.core.Executable;
 import org.example.principles.solid.srp.SRPExample;
 import org.example.principles.solid.ocp.OCPExample;
+import org.example.principles.solid.lsp.LSPExample;
 
 import java.util.List;
 
@@ -17,7 +18,8 @@ public class DesignPracticeDemo {
         // Add principles to the list
         List<Executable> executables = List.of(
                 new SRPExample(),
-                new OCPExample()
+                new OCPExample(),
+                new LSPExample()
         );
 
         // Initialize the manager and execute

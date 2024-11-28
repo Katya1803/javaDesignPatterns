@@ -1,0 +1,40 @@
+1. Lý thuyết chi tiết về Liskov Substitution Principle (LSP)
+1.1. Định nghĩa
+Liskov Substitution Principle (LSP):
+"Subtypes must be substitutable for their base types without altering the correctness of the program."
+(Các class con phải có khả năng thay thế hoàn toàn cho class cha mà không làm thay đổi hành vi của chương trình).
+
+1.2. Mục đích
+Đảm bảo rằng các class kế thừa (subtypes) có thể thay thế cho class cha (base type) mà không làm gián đoạn hoặc thay đổi logic của chương trình.
+Các class con không được vi phạm các ràng buộc đã định nghĩa trong class cha.
+
+1.3. Vấn đề nếu vi phạm LSP
+Nếu một class con:
+Thay đổi hành vi: Logic trong class con làm sai lệch hành vi định nghĩa của class cha.
+Thêm ràng buộc không tương thích: Class con yêu cầu các điều kiện đầu vào hoặc đầu ra khác với class cha.
+Không hỗ trợ đầy đủ các phương thức: Một số phương thức trong class cha không hoạt động chính xác ở class con.
+Ví dụ:
+Class cha `Bird` có phương thức `fly()`. Class con `Penguin` kế thừa từ `Bird` nhưng không thể thực hiện `fly()`.
+Điều này gây ra lỗi khi `Penguin` được sử dụng thay thế cho `Bird`.
+
+1.4. Làm thế nào để tuân thủ LSP?
+Class con không được phá vỡ logic của class cha:
+Các phương thức của class con phải duy trì hành vi của class cha.
+Tuân thủ hợp đồng của abstraction:
+Nếu class cha là abstract, các class con phải thực hiện đầy đủ các phương thức và giữ nguyên ý nghĩa logic.
+Tránh kế thừa sai:
+Nếu class con không phù hợp với class cha, hãy tạo abstraction mới thay vì kế thừa.
+
+1.5. Ví dụ minh họa lý thuyết
+Tình huống: Hệ thống quản lý hình học với các class Rectangle và Square.
+Vi phạm LSP:
+Class Square kế thừa từ Rectangle nhưng logic thay đổi (chiều dài và chiều rộng luôn bằng nhau).
+Giải pháp:
+Tách abstraction thành các class độc lập.
+
+2. Triển khai ví dụ minh họa LSP
+Tình huống thực tế
+Tình huống: Xây dựng hệ thống tính toán diện tích các hình học.
+Class Rectangle tính diện tích dựa trên chiều dài và chiều rộng.
+Class Square kế thừa Rectangle nhưng chiều dài và chiều rộng luôn bằng nhau.
+Vấn đề: Khi Square kế thừa Rectangle, hành vi không còn đúng vì setWidth() và setHeight() của Square không hoạt động như Rectangle.
