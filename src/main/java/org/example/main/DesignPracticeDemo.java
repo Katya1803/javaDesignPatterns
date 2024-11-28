@@ -1,6 +1,7 @@
 package org.example.main;
 
 import org.example.core.Executable;
+import org.example.principles.solid.isp.ISPExample;
 import org.example.principles.solid.srp.SRPExample;
 import org.example.principles.solid.ocp.OCPExample;
 import org.example.principles.solid.lsp.LSPExample;
@@ -19,7 +20,8 @@ public class DesignPracticeDemo {
         List<Executable> executables = List.of(
                 new SRPExample(),
                 new OCPExample(),
-                new LSPExample()
+                new LSPExample(),
+                new ISPExample()
         );
 
         // Initialize the manager and execute

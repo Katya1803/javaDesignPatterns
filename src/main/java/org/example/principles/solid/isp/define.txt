@@ -1,0 +1,61 @@
+1. Lý thuyết chi tiết về Interface Segregation Principle (ISP)
+1.1. Định nghĩa
+Interface Segregation Principle (ISP):
+
+"Clients should not be forced to depend on interfaces they do not use."
+(Các client không nên bị buộc phải phụ thuộc vào các phương thức mà chúng không cần).
+1.2. Mục đích
+Tránh tạo ra các interface quá lớn, chứa các phương thức không liên quan hoặc không cần thiết.
+Đảm bảo rằng mỗi interface chỉ định nghĩa các hành vi mà các class cần thực hiện.
+Giảm bớt sự phụ thuộc không cần thiết giữa các module.
+1.3. Vấn đề nếu vi phạm ISP
+Interface quá lớn:
+Một interface định nghĩa nhiều phương thức mà không phải class nào cũng cần sử dụng.
+Các class implement interface đó phải định nghĩa các phương thức không cần thiết, dẫn đến mã dư thừa.
+Khó bảo trì:
+Khi một interface thay đổi, tất cả các class implement interface đó đều phải sửa đổi.
+Phá vỡ nguyên lý SRP:
+Một interface chịu trách nhiệm cho quá nhiều nhiệm vụ.
+Ví dụ:
+
+
+Interface `Worker` định nghĩa các phương thức `work()` và `manage()`.
+Một công nhân chỉ cần `work()`, nhưng lại phải implement cả `manage()`, điều này là không hợp lý.
+1.4. Làm thế nào để tuân thủ ISP?
+Tách các interface lớn thành các interface nhỏ hơn:
+Mỗi interface chỉ nên định nghĩa các hành vi cụ thể, liên quan trực tiếp đến đối tượng sử dụng nó.
+Sử dụng nhiều interface nhỏ:
+Một class có thể implement nhiều interface nhỏ phù hợp với hành vi của nó.
+Áp dụng abstraction một cách hợp lý:
+Xác định rõ ràng các hành vi cần thiết cho từng loại đối tượng.
+1.5. Ví dụ minh họa lý thuyết
+Vi phạm ISP:
+
+j
+interface Worker {
+    void work();
+    void manage();
+}
+Class Labor chỉ cần work() nhưng vẫn phải implement manage().
+
+Tuân thủ ISP:
+
+
+interface Workable {
+    void work();
+}
+
+interface Manageable {
+    void manage();
+}
+Class Labor chỉ implement Workable, class Manager implement cả Workable và Manageable.
+
+2. Triển khai ví dụ minh họa ISP
+Tình huống thực tế
+Tình huống: Một hệ thống quản lý nhân viên.
+Một nhân viên lao động (Labor) chỉ cần thực hiện công việc.
+Một quản lý (Manager) có thể vừa thực hiện công việc vừa quản lý nhân viên.
+Vi phạm ISP:
+Interface Employee định nghĩa cả work() và manage(), buộc các class không liên quan phải implement tất cả.
+Giải pháp:
+Tách interface Employee thành các interface nhỏ hơn: Workable và Manageable.
