@@ -1,0 +1,17 @@
+Triển khai Proxy Pattern
+Proxy Pattern thuộc nhóm Structural Patterns, cung cấp một lớp đại diện (Proxy) để kiểm soát quyền truy cập hoặc thêm chức năng cho một đối tượng thực (Real Object).
+
+Lý thuyết về Proxy Pattern
+Mục tiêu:
+Proxy kiểm soát quyền truy cập vào đối tượng thực.
+Cung cấp một cách để thực thi các hành động bổ sung trước hoặc sau khi truy cập đối tượng thực.
+Ứng dụng:
+Kiểm soát truy cập: Bảo vệ tài nguyên (e.g., kiểm tra quyền, giới hạn kết nối).
+Tối ưu hóa: Tạo đối tượng thực chỉ khi cần (Lazy Initialization).
+Logging/Audit: Ghi lại các thao tác trên đối tượng thực.
+Tình huống thực tế: Kiểm soát truy cập tài liệu
+Mô tả: Một hệ thống cần kiểm soát quyền truy cập vào tài liệu nhạy cảm (Sensitive Document). Proxy đảm bảo rằng người dùng chỉ có thể truy cập tài liệu nếu họ có quyền phù hợp.
+Ý nghĩa
+Kiểm soát quyền truy cập: Proxy kiểm tra quyền của người dùng trước khi cho phép truy cập tài liệu.
+Tối ưu hóa hiệu năng: Tài liệu thực (RealDocument) chỉ được tải từ đĩa khi cần (Lazy Initialization).
+Tăng tính linh hoạt: Proxy có thể thêm các hành vi khác như logging, caching mà không thay đổi đối tượng thực.

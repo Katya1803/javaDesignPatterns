@@ -1,0 +1,18 @@
+Decorator Pattern thuộc nhóm Structural Patterns, cho phép bạn thêm các tính năng mới cho một đối tượng mà không làm thay đổi lớp của nó. Đây là một cách linh hoạt để mở rộng chức năng của đối tượng mà không cần sử dụng kế thừa.
+
+Lý thuyết về Decorator Pattern
+Mục tiêu:
+Thêm các tính năng mới cho đối tượng tại runtime mà không thay đổi lớp gốc.
+Giúp mở rộng chức năng theo cách linh hoạt hơn so với việc sử dụng kế thừa.
+Ứng dụng:
+Khi cần thêm tính năng cho một đối tượng mà không ảnh hưởng đến các đối tượng khác có cùng lớp.
+Khi cần kết hợp hoặc "xếp chồng" nhiều tính năng bổ sung trên cùng một đối tượng.
+Tình huống thực tế: Quản lý thông báo (Notification System)
+Mô tả: Một hệ thống gửi thông báo (Notification) hỗ trợ gửi email, SMS, và cả thông báo qua Slack. Bạn muốn thêm tính năng logging hoặc encrypt nội dung tin nhắn mà không thay đổi lớp gốc của thông báo.
+Decorator Pattern thuộc nhóm Structural Patterns, cho phép bạn thêm các tính năng mới cho một đối tượng mà không làm thay đổi lớp của nó. Đây là một cách linh hoạt để mở rộng chức năng của đối tượng mà không cần sử dụng kế thừa.
+
+Ý nghĩa
+Tăng tính linh hoạt: Bạn có thể thêm tính năng mới (e.g., Logging, Encryption) mà không thay đổi lớp gốc BasicNotification.
+Tăng tính mở rộng: Thêm Decorator mới dễ dàng mà không cần thay đổi logic của Decorator cũ.
+Tái sử dụng: Decorator có thể được sử dụng lại và kết hợp theo nhiều cách khác nhau.
+

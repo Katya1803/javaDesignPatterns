@@ -1,0 +1,15 @@
+Adapter Pattern thuộc nhóm Structural Patterns, được sử dụng để làm cho các lớp hoặc giao diện không tương thích có thể làm việc cùng nhau.
+
+Lý thuyết về Adapter Pattern
+Mục tiêu: Chuyển đổi giao diện (interface) của một lớp thành một giao diện mà client mong đợi. Giúp kết nối các thành phần không tương thích một cách dễ dàng.
+Ứng dụng: Khi bạn cần sử dụng một lớp hiện có nhưng giao diện của nó không khớp với giao diện bạn đang sử dụng.
+Tình huống thực tế: Adapter cho hệ thống thông báo
+Bạn có một hệ thống gửi thông báo (Notification System) hỗ trợ hai loại thông báo:
+
+Email Notification: Sử dụng giao diện EmailNotification.
+SMS Notification: Không hỗ trợ giao diện Notification mà sử dụng lớp SmsService có phương thức riêng.
+Bạn muốn tạo một Adapter để sử dụng SmsService như một phần của hệ thống thông báo.
+Ý nghĩa
+Giảm sự phụ thuộc: Client (AdapterExample) không cần thay đổi dù SmsService không hỗ trợ giao diện Notification.
+Tăng tính linh hoạt: Có thể thêm các dịch vụ khác (e.g., PushNotification) bằng cách tạo Adapter tương ứng.
+Tái sử dụng: Các lớp không tương thích (e.g., SmsService) có thể tái sử dụng mà không cần sửa đổi.
