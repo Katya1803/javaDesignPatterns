@@ -58,15 +58,16 @@ Each pattern and principle includes:
 
 
 ## 📂 **Project Structure**
+
 src/
 ├── main/
-│   ├── org.example.core/         # Core interfaces and executables
-│   ├── org.example.main/         # Entry point for running demos
-│   ├── org.example.principles/   # SOLID principles implementations
-│   ├── org.example.patterns/     # Design patterns implementations
-│       ├── creational/           # Creational patterns
-│       ├── structural/           # Structural patterns
-│       ├── behavioral/           # Behavioral patterns
+   ├── org.example.core/         # Core interfaces and executables
+   ├── org.example.main/         # Entry point for running demos
+   ├── org.example.principles/   # SOLID principles implementations
+   ├── org.example.patterns/     # Design patterns implementations
+       ├── creational/           # Creational patterns
+       ├── structural/           # Structural patterns
+       ├── behavioral/           # Behavioral patterns
 
 
 ## 🌟 **Highlights**
@@ -80,7 +81,7 @@ For questions or suggestions, feel free to reach out:
 - GitHub: Katya1803
 
   
-🔗 References
+## 🔗 **References**
 - Head First Design Patterns
 - Design Patterns: Elements of Reusable Object-Oriented Software
 - SOLID Principles
