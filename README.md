@@ -32,9 +32,9 @@ Each pattern and principle includes:
 4. Alternatively, run the DesignPracticeDemo class directly from your IDE.
 
 
-🛠️ Implemented Patterns and Principles
+## 🛠️ **Implemented Patterns and Principles**
 
-SOLID Principles
+### SOLID Principles
 - S: Single Responsibility Principle (SRP)
 - O: Open/Closed Principle (OCP)
 - L: Liskov Substitution Principle (LSP)
@@ -42,22 +42,22 @@ SOLID Principles
 - D: Dependency Inversion Principle (DIP)
 
   
-Design Patterns
-1. Creational Patterns
+### Design Patterns
+1. **Creational Patterns**
 - Singleton: Ensures a class has only one instance.
 - Factory: Encapsulates object creation.
 - Prototype: Creates new objects by cloning existing ones.
-2. Structural Patterns
+2. **Structural Patterns**
 - Adapter: Converts one interface into another.
 - Decorator: Adds functionality to objects dynamically.
 - Proxy: Provides a placeholder for another object.
-3. Behavioral Patterns
+3. **Behavioral Patterns**
 - Observer: Defines a one-to-many dependency.
 - Strategy: Encapsulates interchangeable algorithms.
 - Template Method: Defines the skeleton of an algorithm.
 
 
-📂 Project Structure
+## 📂 **Project Structure**
 src/
 ├── main/
 │   ├── org.example.core/         # Core interfaces and executables
@@ -69,12 +69,12 @@ src/
 │       ├── behavioral/           # Behavioral patterns
 
 
-🌟 Highlights
+## 🌟 **Highlights**
 1. Modular Design: Each pattern and principle is implemented in its own package for clarity and reusability.
 2. Executable Framework: Easily run and test each pattern or principle using a centralized manager.
 3. Real-World Use Cases: Illustrates practical applications of patterns and principles.
 
-✉️ Contact
+## ✉️ **Contact**
 For questions or suggestions, feel free to reach out:
 - Email: vuvuworkplace@gmail.com
 - GitHub: Katya1803
