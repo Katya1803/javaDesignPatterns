@@ -1,0 +1,19 @@
+Template Method Pattern thuộc nhóm Behavioral Patterns, cho phép bạn định nghĩa khung (template) của một thuật toán trong một phương thức, với các bước cụ thể được thực thi bởi các lớp con.
+
+Lý thuyết về Template Method Pattern
+Mục tiêu:
+Tạo ra một khung (template) cho một thuật toán trong một lớp cơ sở.
+Cho phép các lớp con ghi đè hoặc định nghĩa lại một số bước cụ thể trong thuật toán mà không làm thay đổi cấu trúc tổng thể.
+Ứng dụng:
+Khi bạn muốn kiểm soát trình tự các bước của thuật toán, nhưng để các lớp con tự định nghĩa chi tiết từng bước.
+Khi có các thao tác chung và thao tác cụ thể cần tách biệt.
+Tình huống thực tế: Quản lý quy trình xử lý tài liệu
+Mô tả: Bạn cần xây dựng một hệ thống xử lý tài liệu hỗ trợ hai loại tài liệu:
+
+Word Document.
+PDF Document.
+Cả hai loại tài liệu có quy trình xử lý chung (mở file, đọc nội dung, đóng file), nhưng cách đọc nội dung (readContent) khác nhau tùy thuộc vào định dạng tài liệu. Sử dụng Template Method Pattern để triển khai.
+Ý nghĩa
+Tăng khả năng tái sử dụng: Các bước chung (e.g., openFile, closeFile) được định nghĩa trong lớp cơ sở, giảm sự lặp lại.
+Linh hoạt: Các lớp con chỉ cần định nghĩa lại những bước cần tùy chỉnh (e.g., readContent).
+Dễ bảo trì: Thay đổi trình tự các bước trong processDocument chỉ cần sửa đổi trong lớp cơ sở DocumentProcessor.

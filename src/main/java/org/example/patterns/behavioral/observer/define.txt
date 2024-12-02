@@ -1,0 +1,19 @@
+Lý thuyết về Observer Pattern
+Mục tiêu: Thiết lập mối quan hệ "One-to-Many" giữa một đối tượng và nhiều đối tượng khác, sao cho khi trạng thái của Subject thay đổi, tất cả các Observer được tự động thông báo.
+Ứng dụng: Observer Pattern thường được sử dụng trong các hệ thống sự kiện, thông báo thay đổi trạng thái, hoặc cập nhật giao diện người dùng.
+Tình huống thực tế: Hệ thống thông báo sự kiện
+Mô tả: Một đối tượng NewsAgency (Subject) cung cấp tin tức. Khi có tin tức mới, các Observer (như EmailSubscriber, SMSSubscriber) được thông báo tự động.
+
+Triển khai Observer Pattern
+Observer Pattern thuộc nhóm Behavioral Patterns, cho phép một đối tượng (gọi là Subject) thông báo cho một nhóm các đối tượng khác (Observers) khi có sự thay đổi trạng thái.
+
+Lý thuyết về Observer Pattern
+Mục tiêu: Thiết lập mối quan hệ "One-to-Many" giữa một đối tượng và nhiều đối tượng khác, sao cho khi trạng thái của Subject thay đổi, tất cả các Observer được tự động thông báo.
+Ứng dụng: Observer Pattern thường được sử dụng trong các hệ thống sự kiện, thông báo thay đổi trạng thái, hoặc cập nhật giao diện người dùng.
+Tình huống thực tế: Hệ thống thông báo sự kiện
+Mô tả: Một đối tượng NewsAgency (Subject) cung cấp tin tức. Khi có tin tức mới, các Observer (như EmailSubscriber, SMSSubscriber) được thông báo tự động.
+
+Ý nghĩa
+Tăng tính mở rộng: Dễ dàng thêm loại Observer mới (e.g., PushNotificationSubscriber) mà không thay đổi Subject.
+Tăng tính linh hoạt: Các Observer độc lập với nhau, và Subject không cần biết chi tiết của chúng.
+Dễ bảo trì: Một thay đổi trong Subject tự động được truyền đến tất cả các Observer.

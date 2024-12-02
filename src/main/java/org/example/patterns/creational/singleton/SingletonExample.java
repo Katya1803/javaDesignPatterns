@@ -18,7 +18,7 @@ public class SingletonExample extends PatternGroup {
     private final Map<String, String> config;
 
     // Private constructor to prevent instantiation
-    private SingletonExample() {
+    public SingletonExample() {
         config = new HashMap<>();
         System.out.println("Singleton Configuration Manager instance created!");
     }

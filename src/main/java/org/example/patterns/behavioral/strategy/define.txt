@@ -1,0 +1,15 @@
+Strategy Pattern thuộc nhóm Behavioral Patterns, cho phép bạn định nghĩa một họ các thuật toán, đặt mỗi thuật toán trong một class riêng biệt, và giúp các thuật toán này có thể thay thế nhau tại runtime.
+
+Lý thuyết về Strategy Pattern
+Mục tiêu:
+Cho phép lựa chọn thuật toán hoặc cách xử lý khác nhau tại runtime mà không thay đổi code của client.
+Tách rời phần logic của thuật toán khỏi phần client sử dụng nó.
+Ứng dụng:
+Khi bạn muốn nhiều thuật toán khác nhau có thể được áp dụng cho một bài toán cụ thể.
+Khi cần thay đổi hoặc mở rộng thuật toán mà không làm ảnh hưởng đến client.
+Tình huống thực tế: Hệ thống thanh toán
+Mô tả: Bạn xây dựng một hệ thống thanh toán hỗ trợ nhiều phương thức thanh toán khác nhau (Credit Card, PayPal, Google Pay). Thay vì để client phụ thuộc vào từng phương thức cụ thể, bạn sử dụng Strategy Pattern để quản lý các thuật toán thanh toán.
+Ý nghĩa
+Tăng tính mở rộng: Dễ dàng thêm một phương thức thanh toán mới (e.g., ApplePayPayment) mà không cần thay đổi lớp PaymentContext.
+Linh hoạt: Client có thể chọn thuật toán hoặc phương thức thanh toán tại runtime.
+Tái sử dụng: Các thuật toán (PaymentStrategy) được tách biệt, dễ kiểm thử và tái sử dụng.
